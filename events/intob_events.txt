@@ -1,0 +1,239 @@
+namespace = intob
+#Flag
+country_event = {
+	id = intob.1
+	hide_window = yes
+	fire_only_once = yes
+	trigger = {
+		NOT = {
+			has_global_flag = ExtendedLeaders_installed
+		}
+	}
+	immediate = {
+		set_global_flag = ExtendedLeaders_installed
+	}
+   
+}
+
+country_event = {
+	id = intob.20
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		
+		owner = {
+			
+			capital_scope = {
+				add_modifier = {
+					modifier = mod_research_aspirant
+				}
+				
+			}
+			capital_scope = {
+				remove_modifier = mod_unity_aspirant
+
+			}
+		
+	}
+
+	}
+   
+}
+country_event = {
+	id = intob.21
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = {
+			
+		
+			capital_scope = {
+				add_modifier = {
+					modifier = mod_unity_aspirant
+				}
+			
+			}
+			capital_scope = {
+				remove_modifier = mod_research_aspirant
+
+			}
+		}
+	}
+   
+}
+
+
+country_event = {
+	id = intob.30
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		
+		owner = {
+			
+			capital_scope = {
+				add_modifier = {
+					modifier = mod_research_aspirant_adv
+				}
+				
+			}
+			capital_scope = {
+				remove_modifier = mod_unity_aspirant_adv
+				remove_modifier = mod_research_aspirant
+				remove_modifier = mod_unity_aspirant
+
+			}
+		
+	}
+
+	}
+   
+}
+country_event = {
+	id = intob.31
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = {
+			
+		
+			capital_scope = {
+				add_modifier = {
+					modifier = mod_unity_aspirant_adv
+				}
+			
+			}
+			capital_scope = {
+				remove_modifier = mod_research_aspirant_adv
+				remove_modifier = mod_research_aspirant
+				remove_modifier = mod_unity_aspirant
+
+			}
+		}
+	}
+   
+}
+
+planet_event = {
+	id = intob.33 
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = {
+			
+		
+			
+			capital_scope = {
+				remove_modifier = mod_research_aspirant_adv
+				remove_modifier = mod_research_aspirant
+				remove_modifier = mod_unity_aspirant
+				remove_modifier = mod_unity_aspirant_adv
+
+			}
+		}
+	}
+   
+}
+
+
+
+
+
+country_event = {
+	id = intob.200
+	
+	location = from
+
+	hide_window = yes
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		
+			has_authority = auth_machine_intelligence
+		
+	}
+	immediate = {
+		
+		owner = {
+			ruler = {
+				add_ruler_trait = leader_trait_ruler_increased_data_storage
+			}
+			
+		}
+
+	}
+   
+}
+
+country_event = {
+	id = intob.1000
+	
+	location = from
+
+	hide_window = yes
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		
+		owner = {
+			create_leader = {
+				class = governor
+				species = event_target:racket_species
+				traits = {
+					add_trait = leader_trait_donald_trump
+					add_trait = leader_trait_time_traveller
+				}
+				name = "Donald Trump"
+			
+
+			}
+			create_leader = {
+				class = governor
+				species = event_target:oracle_species
+				traits = {
+					add_trait = leader_trait_ruthless_capitalist
+					add_trait = leader_trait_time_traveller
+				}
+				name = "Donald Trump Jr."
+			
+
+			}
+			create_leader = {
+				class = governor
+				species = event_target:extradimensional_hunters_species
+				traits = {
+					add_trait = leader_trait_german_engineer
+					add_trait = leader_trait_time_traveller
+				}
+				name = "Bene"
+			
+
+			}
+			create_leader = {
+				class = governor
+				species = event_target:FallenEmpireDeadSpecies
+				traits = {
+					add_trait = leader_trait_religious_icon
+					add_trait = leader_trait_time_traveller
+				}
+				name = "Jesus"
+			
+
+			}
+			
+		}
+
+	}
+   
+}

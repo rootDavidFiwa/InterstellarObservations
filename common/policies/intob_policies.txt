@@ -1,0 +1,148 @@
+
+aspirant_focus = {
+potential = {
+	owner = {
+		capital_scope = {
+			has_building = building_leader_school
+		}
+		
+	}
+}
+
+	allow = {
+		owner = {
+			capital_scope = {
+				has_building = building_leader_school
+			}
+			
+		}
+	}
+	option = {
+		name = "aspirant_research_focus"
+		on_enabled = {
+			country_event = { id = intob.20 }
+		}
+		valid = {
+			owner = {
+				capital_scope = {
+					has_building = building_leader_school
+				}
+				
+			}
+		}
+
+		policy_flags = {
+			"aspirant_research_focus"
+		}
+	}
+
+	option = {
+		name = "aspirant_unity_focus"
+
+		policy_flags = {
+			"aspirant_unity_focus"
+		}
+		on_enabled = {
+			country_event = { id = intob.21 }
+		}
+		modifier = {
+			
+		}
+
+		valid = {
+			owner = {
+				capital_scope = {
+					has_building = building_leader_school
+				}
+				
+			}
+			is_homicidal = no
+		}
+
+		AI_weight = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = multispecies
+			}
+		}
+	}
+
+	
+}
+
+
+aspirant_focus_adv = {
+	potential = {
+		owner = {
+			capital_scope = {
+				has_building = building_leader_school_2
+			}
+			
+		}
+	}
+	
+		allow = {
+			owner = {
+				capital_scope = {
+					has_building = building_leader_school_2
+				}
+				
+			}
+		}
+		option = {
+			name = "aspirant_research_focus_adv"
+			on_enabled = {
+				country_event = { id = intob.30 }
+			}
+			valid = {
+				owner = {
+					capital_scope = {
+						has_building = building_leader_school_2
+					}
+					
+				}
+			}
+	
+			policy_flags = {
+				"aspirant_research_focus_adv"
+			}
+		}
+	
+		option = {
+			name = "aspirant_unity_focus_adv"
+	
+			policy_flags = {
+				"aspirant_unity_focus_adv"
+			}
+			on_enabled = {
+				country_event = { id = intob.31 }
+			}
+			modifier = {
+				
+			}
+	
+			valid = {
+				owner = {
+					capital_scope = {
+						has_building = building_leader_school_2
+					}
+					
+				}
+				is_homicidal = no
+			}
+	
+			AI_weight = {
+				factor = 5
+				modifier = {
+					factor = 0
+					has_valid_ai_personality = yes
+					has_ai_personality_behaviour = multispecies
+				}
+			}
+		}
+	
+		
+	}
+	

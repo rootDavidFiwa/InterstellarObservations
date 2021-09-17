@@ -1,0 +1,147 @@
+
+tech_googol_admin_complex = {
+	cost = @tier4cost3
+	area = society
+	tier = 4
+	category = { statecraft }
+	prerequisites = { "tech_galactic_administration" }
+	weight = @tier4weight3
+
+	
+	modifier = {		# add edict cap
+		country_edict_cap_add = 1
+	}
+
+	weight_modifier = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+			
+		}
+	}
+}
+
+tech_leader_schools = {
+	cost = @tier5cost2
+	area = society
+	tier = 5
+	category = { statecraft }
+	prerequisites = { "tech_googol_admin_complex" }
+	weight = @tier5weight2
+
+	
+
+	weight_modifier = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+				
+			}
+			
+			
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
+
+tech_leader_schools_advanced = {
+	cost = @tier5cost3
+	area = society
+	tier = 5
+	category = { statecraft }
+	prerequisites = { "tech_leader_schools" }
+	weight = @tier5weight3
+
+	
+
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+				
+			}
+			
+			
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
+
+tech_leader_legendary_traits = {
+	cost = @tier5cost3
+	area = society
+	tier = 5
+	category = { statecraft }
+	prerequisites = { "tech_leader_schools_advanced" }
+	weight = @tier5weight3
+
+	modifier = {
+		country_leader_pool_size = 1
+	}
+
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+				
+			}
+			
+			
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}

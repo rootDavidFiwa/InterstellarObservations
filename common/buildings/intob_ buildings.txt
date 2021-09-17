@@ -1,0 +1,183 @@
+building_leader_school = {
+	base_buildtime = @b2_time
+	empire_limit = {
+		base = 1
+	}
+
+	category = research
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		exists = owner
+		
+	}
+	on_destroy = {
+		planet_event = {
+			id = intob.33
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			
+			buildings_no_exotic_gases = yes
+		}
+	}
+
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+	upgrades = {
+		"building_leader_school_2"
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_researchers_produces_mult = 0.075
+		
+	}
+
+	prerequisites = {
+		"tech_leader_schools"
+	}
+
+	triggered_desc = {
+		text = job_leader_aspirant_effect_desc
+	}
+
+	
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 20
+			}
+		}
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 40
+			}
+		}
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+}
+
+building_leader_school_2 = {
+	base_buildtime = @b3_time
+	can_build = no
+	
+	
+	category = research
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		exists = owner
+		
+	}
+	on_destroy = {
+		planet_event = {
+			id = intob.33
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			
+			buildings_no_exotic_gases = yes
+		}
+	}
+
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			exotic_gases = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			exotic_gases = @b3_rare_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_researchers_produces_mult = 0.15
+		
+	}
+
+	prerequisites = {
+		"tech_leader_schools_advanced"
+	}
+
+	triggered_desc = {
+		text = job_leader_aspirant_effect_desc
+	}
+
+	
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 20
+			}
+		}
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 40
+			}
+		}
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+}
+

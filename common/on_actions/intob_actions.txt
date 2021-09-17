@@ -1,0 +1,8 @@
+on_game_start_country {
+	events = {
+		intob.1
+		intob.200
+		
+		intob.1000
+	}
+}

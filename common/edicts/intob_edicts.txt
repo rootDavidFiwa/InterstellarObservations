@@ -1,0 +1,75 @@
+compliance_protocols = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = compliance_protocols }
+			}
+			influence = 200
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = compliance_protocols
+			}
+			influence = 50
+		}
+	}
+	potential = {
+		has_authority = auth_machine_intelligence
+		has_technology = tech_planetary_unification
+		
+	}
+
+	modifier = {
+		
+		planet_evaluators_unity_produces_mult = 0.5
+		custom_tooltip = edict_compliance_protocols_tooltip
+		show_only_custom_tooltip = no
+		
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+work_agency = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = work_agency }
+			}
+			influence = 200
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = work_agency
+			}
+			influence = 50
+		}
+	}
+	potential = {
+		
+		has_technology = tech_googol_admin_complex
+		
+	}
+
+	modifier = {
+		
+		country_leader_pool_size = 2
+		
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}

@@ -1,0 +1,140 @@
+leader_trait_ruler_increased_data_storage = {
+	leader_trait = { ruler }
+	leader_class = { ruler }
+
+	cost = 0
+	modification = no
+	initial = no
+	randomized = no
+	
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_great_khan.dds"
+	modifier = {
+		country_edict_cap_add = 1
+
+	}
+
+	immortal_leaders = yes	
+	hide_age = yes
+}
+
+leader_trait_german_engineer = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_intellectual.dds"
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.35
+		planet_jobs_physics_research_produces_mult = 0.20
+		planet_jobs_society_research_produces_mult = 0.20
+	}
+	leader_potential_add = {
+		NOT = { from = { has_authority = "auth_machine_intelligence" } }
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+}
+
+
+leader_trait_donald_trump = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_great_khan.dds"
+	modifier = {
+		planet_evaluators_unity_produces_mult = 0.35
+		planet_amenities_add = 7
+		planet_jobs_slave_produces_mult = 0.35
+		planet_jobs_society_research_produces_mult = -0.10
+	}
+	leader_potential_add = {
+		NOT = { from = { has_authority = "auth_machine_intelligence" } }
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+}
+
+
+leader_trait_time_traveller = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_intellectual.dds"
+	modifier = {
+		
+		planet_jobs_physics_research_produces_mult = 0.10
+	
+	}
+	leader_potential_add = {
+		NOT = { from = { has_authority = "auth_machine_intelligence" } }
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	immortal_leaders = yes
+}
+
+
+leader_trait_religious_icon = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_intellectual.dds"
+	modifier = {
+		
+		planet_jobs_unity_produces_mult = 0.35
+		pop_ethic_spiritualist_attraction_mult = 0.4
+		pop_ethic_fanatic_spiritualist_attraction_mult = 0.4
+	
+	}
+	leader_potential_add = {
+		NOT = { from = { has_authority = "auth_machine_intelligence" } }
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	immortal_leaders = yes
+}
+
+leader_trait_gifted_negotiator = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_intellectual.dds"
+	modifier = {
+		
+		trade_value_mult = 0.25
+		pop_amenities_usage_mult = -0.3
+	
+	}
+	leader_potential_add = {
+		NOT = { from = { has_authority = "auth_machine_intelligence" } }
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	immortal_leaders = yes
+}
+
+leader_trait_ruthless_capitalist = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_intellectual.dds"
+	modifier = {
+
+		planet_farmers_energy_produces_add = 0.2
+		planet_miners_energy_produces_add = 0.2
+		job_miner_per_pop = 0.1
+		job_farmer_per_pop = 0.1
+	
+	}
+	leader_potential_add = {
+		NOT = { from = { has_authority = "auth_machine_intelligence" } }
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	immortal_leaders = yes
+}

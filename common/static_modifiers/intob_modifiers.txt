@@ -1,0 +1,30 @@
+mod_research_aspirant = {
+	
+	job_leader_aspirant_add = 1
+	
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_rich.dds"
+	icon_frame = 1
+}
+mod_unity_aspirant = {
+	job_leader_aspirant_unity_add = 1
+	
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_rich.dds"
+	icon_frame = 1
+}
+mod_research_aspirant_adv = {
+	
+	job_leader_aspirant_add = 1
+	job_leader_aspirant_per_pop = 0.1
+	planet_stability_add = 5
+	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_rich.dds"
+	icon_frame = 1
+}
+mod_unity_aspirant_adv = {
+	job_leader_aspirant_unity_add = 2
+	job_leader_aspirant_unity_per_pop = 0.1
+	planet_stability_add = 5
+	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_rich.dds"
+	icon_frame = 1
+}
