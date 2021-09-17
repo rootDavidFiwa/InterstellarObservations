@@ -6,3 +6,10 @@ on_game_start_country {
 		intob.1000
 	}
 }
+
+on_yearly_pulse = {
+	events = {
+		
+	}
+
+}

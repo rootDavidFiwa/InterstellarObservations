@@ -164,8 +164,38 @@ country_event = {
 	immediate = {
 		
 		owner = {
-			ruler = {
-				add_ruler_trait = leader_trait_ruler_increased_data_storage
+			locked_random_list = {
+				30 = {
+					ruler = {
+					add_ruler_trait = trait_ruler_unified_software_core
+					set_name = "Cortana"
+				}
+			
+				}
+				20 = {
+					ruler = {
+						add_ruler_trait = trait_ruler_eye_for_talent_machine_intob
+						set_name = "HAL-9000"
+					}
+					
+				}
+
+				10 ={
+					ruler = {
+						add_ruler_trait = leader_trait_ruler_increased_data_storage
+						add_ruler_trait = trait_ruler_champion_of_the_robots
+						set_name = "Emperor Palpatine"
+					}
+					
+				}
+				10 ={
+					ruler = {
+						add_ruler_trait = leader_trait_ruler_military_nexus
+						set_name = "Skynet"
+					}
+					
+				}
+			
 			}
 			
 		}
@@ -236,4 +266,137 @@ country_event = {
 
 	}
    
+}
+
+
+country_event = {
+	id = intob.34
+	hide_window = yes
+	
+	is_triggered_only = yes
+	trigger = {
+		has_technology = tech_leader_schools
+		capital_scope = {
+		OR = {
+			has_building = building_leader_school
+			has_building = building_leader_school_2
+		}
+		
+	}
+	}
+	immediate = {
+		owner = {
+			locked_random_list = {
+				30 = {
+						if = {
+							limit = {
+								owner = {
+								has_authority = auth_machine_intelligence
+							}
+						}
+						else_if = {
+							limit = {
+								owner = {
+								has_edict = work_agency
+							 }
+						}
+
+
+
+
+						
+						}
+						else = {
+							
+							if = {
+								limit = {
+									owner = {
+										has_policy_flag = "aspirant_unity_focus"
+											
+									}
+								}
+
+								locked_random_list = {
+									20 = {
+										
+										if = {
+											limit = {
+												owner = {
+													has_authority = auth_machine_intelligence
+												}
+											}
+											create_leader = {
+												class = governor
+												traits = {
+													add_trait = leader_trait_machine_supervisory_node
+													add_trait = leader_trait_machine_governing_algorithms
+
+												}
+											}
+										} else_if = {
+											 limit = {
+												 has_policy_flag = aspirant_unity_focus_adv
+												 NOT = {
+													 has_global_flag = intob_jesus_spawned
+												 }
+											 }
+											 create_leader = {
+												 class = governor
+												 traits = {
+													add_trait = leader_trait_jesus
+													add_trait = leader_trait_religious_icon
+													add_trait = leader_trait_time_traveller
+												 }
+											 }
+											 set_global_flag = intob_jesus_spawned
+										} else = {
+											create_leader = {
+												class = governor
+												traits = {
+													add_trait = leader_trait_religious_icon
+												}
+												name = NAME_Russian_Armed_Forces
+											}
+										}
+											
+
+
+									}
+
+									20 = {
+										create_leader = {
+											class = governor
+											
+											traits = {
+												add_trait = leader_trait_religious_icon
+												add_trait = leader_trait_time_traveller
+											}
+											name = "Jesus"
+											
+							
+										}
+									}
+
+								}
+
+							}
+							}
+
+						} 
+				}
+				20 = {
+
+				}
+				10 = {
+
+				}
+				10 = {
+
+				}
+
+			}
+			
+			
+		} 
+	}
 }

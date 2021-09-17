@@ -138,3 +138,121 @@ leader_trait_ruthless_capitalist = {
 	leader_class = { governor }
 	immortal_leaders = yes
 }
+
+leader_trait_jesus = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_psionic_chosen_one.dds"
+	immortal_leaders = yes
+	modifier = {
+		planet_stability_add = 10
+		planet_jobs_unity_produces_mult = 0.35
+		spiritualist_attraction = 20
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	opposites = { "leader_trait_governor_cyborg" "leader_trait_governor_synthetic" }
+	initial = no
+	randomized = no
+}
+
+leader_trait_blessed_by_god = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_psionic_chosen_one.dds"
+	immortal_leaders = yes
+	modifier = {
+		planet_stability_add = 10
+		planet_jobs_unity_produces_mult = 0.35
+		spiritualist_attraction = 20
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	opposites = { "leader_trait_governor_cyborg" "leader_trait_governor_synthetic" }
+	initial = no
+	randomized = no
+}
+leader_trait_machine_supervisory_node = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_erudite.dds"
+	modifier = {
+		planet_jobs_complex_drone_unity_produces_mult = 15
+		planet_amenities_mult = 5
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = yes
+}
+leader_trait_machine_governing_algorithms = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_erudite.dds"
+	modifier = {
+		species_leader_exp_gain = 0.25
+		planet_stability_add = 5
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no
+}
+
+
+trait_ruler_eye_for_talent_machine_intob = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_eye_for_talent.dds"
+	leader_potential_add = {
+		 from = { has_authority = auth_machine_intelligence } 
+	}
+	modifier = {
+		leader_skill_levels = 1
+		species_leader_exp_gain = 0.20
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	
+}
+
+trait_ruler_champion_of_the_robots = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_champion_of_the_people.dds"
+	leader_potential_add = {
+		 from = { has_authority = auth_machine_intelligence } 
+	}
+	modifier = {
+		planet_pops_robotics_upkeep_mult = -0.1
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+}
+trait_ruler_unified_software_core = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_champion_of_the_people.dds"
+	leader_potential_add = {
+		 from = { has_authority = auth_machine_intelligence } 
+	}
+	modifier = {
+		planet_jobs_complex_drone_unity_produces_mult = 0.1
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+}
+leader_trait_ruler_military_nexus = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_great_khan.dds"
+	immortal_leaders = yes
+	modifier = {
+		army_attack_damage_mult = 0.25
+		ship_weapon_damage = 0.05
+	}
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	initial = no
+	randomized = no
+}
