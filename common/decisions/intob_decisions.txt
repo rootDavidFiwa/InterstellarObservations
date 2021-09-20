@@ -1,0 +1,121 @@
+
+decision_planet_energy_deployment = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+	
+	resources = {
+		category = decisions
+		cost = {
+			trigger = {
+				num_pops < 10
+			}
+			energy = 200
+			alloys = 20
+			
+		}
+		cost = {
+			trigger = {
+				num_pops >= 10
+				num_pops < 20
+			}
+			energy = 250
+			alloys = 30
+			
+		}
+		cost = {
+			trigger = {
+				num_pops >= 20
+				num_pops < 30
+			}
+			energy = 300
+			alloys = 40
+			minor_artifacts = 1
+		}
+		cost = {
+			trigger = {
+				num_pops >= 30
+				num_pops < 40
+			}
+			energy = 400
+			alloys = 50
+			minor_artifacts = 1
+		}
+		cost = {
+			trigger = {
+				num_pops >= 40
+				num_pops < 50
+			}
+			energy = 500
+			alloys = 100
+			minor_artifacts = 2
+		}
+		cost = {
+			trigger = {
+				num_pops >= 50
+				num_pops < 60
+			}
+			energy = 600
+			alloys = 150
+			minor_artifacts = 2
+		}
+		cost = {
+			trigger = {
+				num_pops >= 60
+				num_pops < 70
+			}
+			energy = 1000
+			alloys = 250
+			minor_artifacts = 2
+		}
+		cost = {
+			trigger = {
+				num_pops >= 70
+				num_pops < 85
+			}
+			energy = 1500
+			alloys = 250
+			minor_artifacts = 2
+		}
+		cost = {
+			trigger = {
+				num_pops >= 85
+				num_pops < 100
+			}
+			energy = 4000
+			alloys = 500
+			minor_artifacts = 2
+		}
+		cost = {
+			trigger = {
+				num_pops >= 100
+			}
+			energy = 10000
+			alloys = 1000
+			minor_artifacts = 2
+		}
+	}
+
+	potential = {
+		owner = { is_machine_empire = yes }
+	}
+
+	allow = {
+		NOT = { has_modifier = planet_energy_deployment }
+	}
+
+	effect = {
+		add_modifier = { modifier = "planet_energy_deployment" days = 3600 }
+		owner = {
+			
+		
+			country_event = {
+				id = intob.979
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}

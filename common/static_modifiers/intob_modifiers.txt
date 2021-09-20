@@ -28,3 +28,17 @@ mod_unity_aspirant_adv = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_rich.dds"
 	icon_frame = 1
 }
+
+planet_energy_deployment = {
+	planet_pops_robotics_alloys_upkeep_mult = -0.05
+	planet_pops_robotics_upkeep_mult  = -0.05
+	planet_jobs_robotic_produces_mult = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/pm_resources_2.dds"
+}
+
+triumph_dragon_beacon = {
+	country_unity_produces_mult = 0.25
+	country_unity_produces_add = 50
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_resources_2.dds"
+}

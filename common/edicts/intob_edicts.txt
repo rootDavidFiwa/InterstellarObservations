@@ -73,3 +73,40 @@ work_agency = {
 		weight = @EdictMedPrio
 	}
 }
+
+work_agency = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+	edict_cap_usage = 1
+
+	resources = {
+		category = edicts
+		cost = { #Activation Cost
+			trigger = {
+				NOT = { has_edict = work_agency }
+			}
+			influence = 200
+		}
+		cost = { #Deactivation Cost
+			trigger = {
+				has_edict = work_agency
+			}
+			influence = 50
+		}
+	}
+	potential = {
+		
+		has_technology = tech_googol_admin_complex
+		
+	}
+	
+	modifier = {
+		
+		
+		
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}

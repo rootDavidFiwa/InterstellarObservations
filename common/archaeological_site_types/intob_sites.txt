@@ -1,0 +1,36 @@
+intob_digsite_1 = {
+	desc = intob_digsite_1_desc
+	picture = GFX_evt_overgrown_city
+	stages = 3
+	max_instances = 1
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+	
+		default_site_visible_trigger = yes
+	}
+	
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_F1
+		event = intob.1001
+	}
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_F2
+		event = intob.1002
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_F3
+		event = intob.1003
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
