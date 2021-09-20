@@ -1,7 +1,7 @@
 intob_digsite_1 = {
 	desc = intob_digsite_1_desc
 	picture = GFX_evt_overgrown_city
-	stages = 3
+	stages = 4
 	max_instances = 1
 	allow = {
 		is_ship_class = shipclass_science_ship
@@ -26,6 +26,11 @@ intob_digsite_1 = {
 		difficulty = 2
 		icon = GFX_archaeology_runes_F3
 		event = intob.1003
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_F3
+		event = intob.1004
 	}
 
 	on_roll_failed = {

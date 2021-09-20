@@ -42,3 +42,7 @@ triumph_dragon_beacon = {
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_resources_2.dds"
 }
+mod_country_work_agenda_active = {
+	icon = "gfx/interface/icons/resources/minor_artifacts.dds"
+	custom_tooltip = mod_work_agenda.desc
+}

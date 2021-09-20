@@ -1,0 +1,466 @@
+### Zrocursor Home System
+intob_1_final_system = {
+	name = "Hephar"
+	class = "sc_f"
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 125
+	}
+	flags = { intob_1_system }
+
+	planet = {
+		class = star
+		orbit_distance = 0
+	}
+
+	planet = {
+		count = 1
+		orbit_distance = 20
+		orbit_angle = 20
+		size = 5
+		has_ring = no
+
+		init_effect = {
+			set_name = "NAME_Dragons_Hoard"
+			set_planet_flag = beacon_hoard_planet
+			save_global_event_target_as = dragon_beacon_planet
+			prevent_anomaly = yes
+			set_deposit = d_guardian_dragon_hoard
+
+			create_country = {
+				name = "NAME_Voidwyrm"
+				type = guardian_dragon
+				flag = {
+					icon = {
+						category = "zoological"
+						file = "flag_zoological_5.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors={
+						"red"
+						"red"
+						"null"
+						"null"
+					}
+				}
+			}
+			last_created_country = {
+				save_global_event_target_as = dragon_beacon_country
+				set_country_flag = dragon_beacon_country
+			}
+
+			create_fleet = {
+				name = "NAME_Ether_Drake"
+				settings = {
+					spawn_debris = no
+					is_boss = yes
+				}
+				effect = {
+					set_owner = event_target:dragon_beacon_country
+					create_ship = {
+						name = "NAME_Avice"
+						design = "NAME_Grand_Dragon"
+						
+					}
+					create_ship = {
+						name = "NAME_Avice"
+						design = "NAME_Guardian"
+					}
+					create_ship = {
+						name = "NAME_Avice"
+						design = "NAME_Grand_Dragon"
+					}
+					create_ship = {
+						name = "NAME_Avice"
+						design = "NAME_Grand_Dragon"
+					}
+					create_ship = {
+						name = "NAME_Avice"
+						design = "NAME_Grand_Dragon"
+					}
+					set_fleet_flag = dragon_beacon_fleet
+					set_location = event_target:dragon_beacon_planet
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 500
+					queue_actions = {
+						repeat = {
+							find_closest_planet = {
+								trigger = {
+									id = dragon.home.1
+									is_star = yes
+								}
+								found_planet = {
+									move_to = this
+									orbit_planet = this
+									wait = {
+										duration = 30
+										random = 20
+									}
+								}
+							}
+							find_closest_planet = {
+								trigger = {
+									id = dragon.home.2
+									is_star = no
+									NOT = {
+										is_same_value = event_target:dragon_beacon_planet
+									}
+								}
+								found_planet = {
+									move_to = this
+									orbit_planet = this
+									wait = {
+										duration = 30
+										random = 20
+									}
+								}
+							}
+							find_closest_planet = {
+								trigger = {
+									id = dragon.home.3
+									is_same_value = event_target:dragon_beacon_planet
+								}
+								found_planet = {
+									move_to = this
+									orbit_planet = this
+									wait = {
+										duration = 30
+										random = 20
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_molten"
+		orbit_distance = 35
+		orbit_angle = 40
+		size = 15
+		has_ring = no
+		
+	}
+
+	planet = {
+		class = "pc_barren" 
+		orbit_distance = 26
+		orbit_angle = 210
+		size = 25
+		has_ring = yes
+
+		init_effect = {
+			create_ambient_object = {
+				type = "large_debris_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "medium_debris_01_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "small_debris_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_shattered"
+		orbit_distance = 20
+		orbit_angle = 70
+		size = 20
+		has_ring = no
+
+		init_effect = {
+			prevent_anomaly = yes
+			create_ambient_object = {
+				type = "large_debris_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "medium_debris_01_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "small_debris_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_broken"
+		orbit_distance = 20
+		orbit_angle = 275
+		size = 15
+		has_ring = no
+
+		init_effect = {
+			create_ambient_object = {
+				type = "large_debris_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "medium_debris_01_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "small_debris_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 30
+		orbit_angle = -210
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -95
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_barren"
+		orbit_distance = 30
+		orbit_angle = 45
+		size = 20
+		has_ring = no
+	}
+
+	planet = {
+		name = "NAME_Zron_Prime"
+		class = "pc_shrouded"
+		orbit_distance = 50
+		orbit_angle = 145
+		size = 35
+		has_ring = no
+		flags = { Zrocursor_homeworld }
+
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			create_archaeological_site = zroni_digsite_6
+			add_deposit = d_zro_deposit_5
+		}
+	}
+
+	planet = {
+		class = "pc_gas_giant"
+		orbit_distance = 20
+		orbit_angle = 145
+		size = 20
+		has_ring = no
+
+		moon = {
+			class = "pc_frozen"
+			size = 8
+			orbit_distance = 12
+			orbit_angle = 320
+			has_ring = no
+		}
+
+		moon = {
+			class = "pc_frozen"
+			size = 8
+			orbit_distance = 4
+			orbit_angle = 150
+			has_ring = no
+		}
+	}
+
+	planet = {
+		class = "pc_gas_giant"
+		orbit_distance = 20
+		orbit_angle = 145
+		size = 25
+		has_ring = no
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+
+	planet = {
+		class = "pc_shattered"
+		orbit_distance = 20
+		orbit_angle = 45
+		size = 15
+		has_ring = no
+
+		init_effect = {
+			create_ambient_object = {
+				type = "large_debris_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "medium_debris_01_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+			create_ambient_object = {
+				type = "small_debris_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 15
+					angle = random
+				}
+			}
+		}
+	}
+}

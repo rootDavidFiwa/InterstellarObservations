@@ -119,3 +119,6 @@
  intob.1002.a:0 "We have to keep trying!"
  intob.1003.name:0 "Ancient Signal Buoy"
  intob.1003.desc:0 "An ancient signal has been detected!"
+ intob.1004.a:0 "Ancient Communications"
+ mod_country_work_agenda_active:0 "Enhanced Leader Recruitment"
+ mod_work_agenda.desc:0 "The §YNational Work Agency§! enhances our leader pool."
