@@ -118,6 +118,7 @@ tech_leader_legendary_traits = {
 
 	modifier = {
 		country_leader_pool_size = 1
+		
 	}
 
 	weight_modifier = {

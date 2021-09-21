@@ -22,17 +22,17 @@ leader_trait_german_engineer = {
 	modification = no
 	initial = no
 	randomized = no
-	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_intellectual.dds"
+	icon = "gfx/interface/icons/traits/leader_traits/trait_german_engineer.dds"
 	modifier = {
 		planet_jobs_engineering_research_produces_mult = 0.35
 		planet_jobs_physics_research_produces_mult = 0.20
 		planet_jobs_society_research_produces_mult = 0.20
 	}
 	leader_potential_add = {
-		NOT = { from = { has_authority = "auth_machine_intelligence" } }
+		always = yes
 	}
-	leader_trait = { governor }
-	leader_class = { governor }
+	leader_trait = { governor scientist }
+	leader_class = { governor scientist }
 }
 
 
@@ -68,11 +68,11 @@ leader_trait_time_traveller = {
 	
 	}
 	leader_potential_add = {
-		NOT = { from = { has_authority = "auth_machine_intelligence" } }
+		
 	}
-	leader_trait = { governor }
-	leader_class = { governor }
-	immortal_leaders = yes
+	leader_trait = { governor scientist }
+	leader_class = { governor scientist }
+	
 }
 
 
@@ -114,7 +114,7 @@ leader_trait_gifted_negotiator = {
 	}
 	leader_trait = { governor }
 	leader_class = { governor }
-	immortal_leaders = yes
+	
 }
 
 leader_trait_ruthless_capitalist = {
@@ -136,7 +136,7 @@ leader_trait_ruthless_capitalist = {
 	}
 	leader_trait = { governor }
 	leader_class = { governor }
-	immortal_leaders = yes
+	
 }
 
 leader_trait_jesus = {
@@ -256,3 +256,25 @@ leader_trait_ruler_military_nexus = {
 	initial = no
 	randomized = no
 }
+
+
+leader_trait_legendary = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_rooted.dds"
+	modifier = {
+		planet_stability_add = 5
+		planet_amenities_add = 5
+		ship_weapon_damage = 0.05
+	
+	}
+	leader_potential_add = {
+		
+	}
+	leader_trait = { governor scientist }
+	leader_class = { governor scientist }
+	immortal_leaders = yes
+}
+

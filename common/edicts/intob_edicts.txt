@@ -40,8 +40,69 @@ compliance_protocols = {
 work_agency = {
 	length = -1
 	icon = "GFX_edict_type_policy"
+	
 	edict_cap_usage = 1
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = work_agency_first_activation
+				}
+			}
+			set_country_flag = work_agency_first_activation
+			locked_random_list = {
+				10 = {
+					create_leader = {
+						class = scientist
+						species = event_target:new_robotic_species
+						name = "Bene"
+						traits = {
+							add_trait = leader_trait_legendary
+							add_trait = leader_trait_german_engineer
+							add_trait = leader_trait_time_traveller
 
+						}
+
+					}
+				}
+				20 = {
+					create_leader = {
+						class = scientist
+						species = event_target:new_organic_species
+						name = "Alarik"
+						traits = {
+							add_trait = leader_trait_legendary
+							add_trait = leader_trait_substance_abuser
+							add_trait = leader_trait_religious_icon
+							add_trait = leader_trait_time_traveller
+
+						}
+				}
+			}
+				10 = {
+					create_leader = {
+						class = scientist
+						species = event_target:new_organic_species
+						name = "David"
+						traits = {
+							add_trait = leader_trait_legendary
+							add_trait = leader_trait_substance_abuser
+							add_trait = leader_trait_gifted_negotiator
+							add_trait = leader_trait_time_traveller
+
+						}
+						
+				}
+			}
+				
+			
+
+		}
+	}
+
+	
+	
+	}
 	resources = {
 		category = edicts
 		cost = { #Activation Cost
@@ -56,53 +117,21 @@ work_agency = {
 			}
 			influence = 50
 		}
-	}
-	potential = {
-		
-		has_technology = tech_googol_admin_complex
-		
-	}
-
-	modifier = {
-		
-		country_leader_pool_size = 2
-		
-	}
-
-	ai_weight = {
-		weight = @EdictMedPrio
-	}
-}
-
-work_agency = {
-	length = -1
-	icon = "GFX_edict_type_policy"
-	edict_cap_usage = 1
-
-	resources = {
-		category = edicts
-		cost = { #Activation Cost
-			trigger = {
-				NOT = { has_edict = work_agency }
-			}
-			influence = 200
-		}
-		cost = { #Deactivation Cost
-			trigger = {
-				has_edict = work_agency
-			}
-			influence = 50
-		}
-	}
-	potential = {
-		
-		has_technology = tech_googol_admin_complex
-		
 	}
 	
+	potential = {
+		
+		has_technology = tech_leader_legendary_traits
+		
+	}
+
 	modifier = {
 		
+		country_leader_pool_size = 1
+		custom_tooltip = work_agency.1.desc
 		
+		
+		show_only_custom_tooltip = no
 		
 	}
 

@@ -122,3 +122,7 @@
  intob.1004.a:0 "Ancient Communications"
  mod_country_work_agenda_active:0 "Enhanced Leader Recruitment"
  mod_work_agenda.desc:0 "The §YNational Work Agency§! enhances our leader pool."
+
+ leader_trait_legendary:0 "Legendary"
+ leader_trait_legendary_desc:0 "This legendary leader is an icon across time and space."
+ work_agency.1.desc:0 "Enables leader recruitment. Leaders receive §Yone random trait§! after standard recruitment. On first activation the owner rolls one out of three legendary leaders and recruits that leader."
